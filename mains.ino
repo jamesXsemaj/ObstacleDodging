@@ -26,7 +26,8 @@ void setup()
   
 void loop() 
 { 
-  
+  int speed = 55;
+    analogWrite(motorPin, speed);
   if(digitalRead(onSwitch) == LOW){//hold push bottom to turn motor on
     if (digitalRead(toggleSwitch) == HIGH) { 
     digitalWrite(motorTerminal1, LOW); //these logic levels create forward direction
@@ -59,6 +60,7 @@ void loop()
     {                                  
       servo_test.write(angle);                 //command to rotate the servo to the specified angle
       delay(15);                       
+      //delay there 
     } 
  
     delay(1000);
